@@ -35,149 +35,54 @@
   }
   body.overlay-open { overflow: hidden; }
 
-  /* ── MASTHEAD ── */
   .masthead { border-bottom: 3px double var(--ink); padding: 1.2rem 0 1rem; text-align: center; }
-  .masthead-rule {
-    display: flex; align-items: center; gap: 1rem; max-width: 1200px; margin: 0 auto; padding: 0 2rem;
-  }
+  .masthead-rule { display: flex; align-items: center; gap: 1rem; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
   .masthead-rule::before, .masthead-rule::after { content: ''; flex: 1; height: 1px; background: var(--ink); }
   .masthead-rule .diamond { font-size: 0.45rem; color: var(--ink); }
-  .masthead-date {
-    font-family: var(--sans); font-size: 0.65rem; font-weight: 400;
-    text-transform: uppercase; letter-spacing: 3px; color: var(--warm-gray); margin: 0.8rem 0 0.4rem;
-  }
-  .masthead h1 {
-    font-family: var(--serif);
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    line-height: 1.05;
-  }
-  .masthead-tagline {
-    font-family: var(--sans); font-weight: 300; font-style: italic;
-    font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem;
-  }
+  .masthead-date { font-family: var(--sans); font-size: 0.65rem; font-weight: 400; text-transform: uppercase; letter-spacing: 3px; color: var(--warm-gray); margin: 0.8rem 0 0.4rem; }
+  .masthead h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; letter-spacing: -0.5px; line-height: 1.05; }
+  .masthead-tagline { font-family: var(--sans); font-weight: 300; font-style: italic; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
 
-  /* ── NAV ── */
-  .nav-bar {
-    border-bottom: 1px solid var(--rule); padding: 0.6rem 0;
-    position: sticky; top: 0; background: var(--paper); z-index: 100;
-  }
-  .nav-inner {
-    max-width: 1200px; margin: 0 auto; display: flex;
-    justify-content: center; gap: 2rem; padding: 0 2rem;
-  }
-  .nav-bar a {
-    font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 2.5px; text-decoration: none;
-    color: var(--ink); padding: 0.25rem 0; position: relative; transition: color 0.2s;
-  }
-  .nav-bar a::after {
-    content: ''; position: absolute; bottom: -2px; left: 0;
-    width: 0; height: 2px; background: var(--accent); transition: width 0.3s ease;
-  }
+  .nav-bar { border-bottom: 1px solid var(--rule); padding: 0.6rem 0; position: sticky; top: 0; background: var(--paper); z-index: 100; }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 2rem; padding: 0 2rem; }
+  .nav-bar a { font-family: var(--sans); font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2.5px; text-decoration: none; color: var(--ink); padding: 0.25rem 0; position: relative; transition: color 0.2s; }
+  .nav-bar a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s ease; }
   .nav-bar a:hover { color: var(--accent); }
   .nav-bar a:hover::after { width: 100%; }
 
-  /* ── MAIN LAYOUT ── */
   .main-layout { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-
-  .section-header {
-    border-bottom: 2px solid var(--ink); padding: 2.5rem 0 0.4rem; margin-bottom: 1.5rem;
-    display: flex; align-items: baseline; justify-content: space-between;
-  }
+  .section-header { border-bottom: 2px solid var(--ink); padding: 2.5rem 0 0.4rem; margin-bottom: 1.5rem; display: flex; align-items: baseline; justify-content: space-between; }
   .section-header h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; }
-  .section-header .label {
-    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 3px; color: var(--warm-gray);
-  }
+  .section-header .label { font-family: var(--sans); font-size: 0.6rem; font-weight: 500; text-transform: uppercase; letter-spacing: 3px; color: var(--warm-gray); }
+  .edition-line { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; font-family: var(--sans); font-size: 0.6rem; font-weight: 400; text-transform: uppercase; letter-spacing: 2px; color: var(--warm-gray); border-bottom: 1px solid var(--rule); }
 
-  .edition-line {
-    display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0;
-    font-family: var(--sans); font-size: 0.6rem; font-weight: 400;
-    text-transform: uppercase; letter-spacing: 2px; color: var(--warm-gray);
-    border-bottom: 1px solid var(--rule);
-  }
-
-  /* ── PITCH GRID ── */
-  .pitch-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 0; border-left: 1px solid var(--rule); margin-bottom: 2rem;
-  }
-  .pitch-card {
-    padding: 1.5rem 1.5rem 2.5rem; border-right: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule); transition: background 0.3s;
-    cursor: pointer; position: relative;
-  }
+  .pitch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-left: 1px solid var(--rule); margin-bottom: 2rem; }
+  .pitch-card { padding: 1.5rem 1.5rem 2.5rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transition: background 0.3s; cursor: pointer; position: relative; }
   .pitch-card:hover { background: var(--cream); }
   .pitch-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
-  .pitch-tag {
-    font-family: var(--sans); font-size: 0.55rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 2px; padding: 0.15rem 0.5rem;
-    border: 1px solid; display: inline-block;
-  }
+  .pitch-tag { font-family: var(--sans); font-size: 0.55rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; padding: 0.15rem 0.5rem; border: 1px solid; display: inline-block; }
   .pitch-tag.long { color: var(--green); border-color: var(--green); }
   .pitch-tag.short { color: var(--accent); border-color: var(--accent); }
   .pitch-date { font-family: var(--mono); font-size: 0.65rem; color: var(--warm-gray); }
-  .pitch-card h3 {
-    font-family: var(--serif); font-size: 1.15rem; font-weight: 500;
-    margin-bottom: 0.25rem; line-height: 1.3;
-  }
+  .pitch-card h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 500; margin-bottom: 0.25rem; line-height: 1.3; }
   .pitch-ticker { font-family: var(--mono); font-size: 0.8rem; font-weight: 500; color: var(--blue-ink); margin-bottom: 0.4rem; }
   .pitch-summary { font-size: 0.85rem; font-weight: 300; color: #444; line-height: 1.55; }
-  .pitch-card .read-arrow {
-    position: absolute; bottom: 1.2rem; right: 1.5rem;
-    font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 2px; color: var(--accent);
-    opacity: 0; transform: translateX(-8px); transition: all 0.3s;
-  }
+  .pitch-card .read-arrow { position: absolute; bottom: 1.2rem; right: 1.5rem; font-family: var(--sans); font-size: 0.65rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); opacity: 0; transform: translateX(-8px); transition: all 0.3s; }
   .pitch-card:hover .read-arrow { opacity: 1; transform: translateX(0); }
-  .pitch-has-model {
-    position: absolute; bottom: 1.2rem; left: 1.5rem;
-    font-family: var(--mono); font-size: 0.55rem; text-transform: uppercase;
-    letter-spacing: 1.5px; color: var(--warm-gray);
-    display: flex; align-items: center; gap: 0.3rem;
-  }
+  .pitch-has-model { position: absolute; bottom: 1.2rem; left: 1.5rem; font-family: var(--mono); font-size: 0.55rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--warm-gray); display: flex; align-items: center; gap: 0.3rem; }
   .pitch-has-model svg { width: 11px; height: 11px; fill: none; stroke: var(--warm-gray); stroke-width: 1.5; }
 
-  /* ── PITCH DETAIL OVERLAY ── */
-  .pitch-detail-overlay {
-    position: fixed; inset: 0; z-index: 1000;
-    display: none; opacity: 0; transition: opacity 0.35s ease;
-  }
+  .pitch-detail-overlay { position: fixed; inset: 0; z-index: 1000; display: none; opacity: 0; transition: opacity 0.35s ease; }
   .pitch-detail-overlay.active { display: flex; }
   .pitch-detail-overlay.visible { opacity: 1; }
-  .overlay-backdrop {
-    position: fixed; inset: 0; background: rgba(26,26,26,0.45);
-    backdrop-filter: blur(4px);
-  }
-  .detail-panel {
-    position: fixed; top: 0; right: 0;
-    width: min(900px, 100vw); height: 100vh;
-    background: var(--paper); overflow-y: auto;
-    transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
-    box-shadow: -8px 0 40px rgba(0,0,0,0.12);
-  }
+  .overlay-backdrop { position: fixed; inset: 0; background: rgba(26,26,26,0.45); backdrop-filter: blur(4px); }
+  .detail-panel { position: fixed; top: 0; right: 0; width: min(900px, 100vw); height: 100vh; background: var(--paper); overflow-y: auto; transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); box-shadow: -8px 0 40px rgba(0,0,0,0.12); }
   .pitch-detail-overlay.visible .detail-panel { transform: translateX(0); }
-  .detail-topbar {
-    position: sticky; top: 0; background: var(--paper);
-    border-bottom: 1px solid var(--rule); padding: 0.8rem 2rem;
-    display: flex; align-items: center; justify-content: space-between; z-index: 10;
-  }
-  .detail-back {
-    font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 2px; background: none;
-    border: none; cursor: pointer; color: var(--ink); transition: color 0.2s;
-  }
+  .detail-topbar { position: sticky; top: 0; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 0.8rem 2rem; display: flex; align-items: center; justify-content: space-between; z-index: 10; }
+  .detail-back { font-family: var(--sans); font-size: 0.65rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; background: none; border: none; cursor: pointer; color: var(--ink); transition: color 0.2s; }
   .detail-back:hover { color: var(--accent); }
   .detail-tabs { display: flex; border: 1px solid var(--rule); }
-  .detail-tab {
-    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 2px; padding: 0.4rem 1rem;
-    background: none; border: none; border-right: 1px solid var(--rule);
-    cursor: pointer; color: var(--muted); transition: all 0.2s;
-  }
+  .detail-tab { font-family: var(--sans); font-size: 0.6rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; padding: 0.4rem 1rem; background: none; border: none; border-right: 1px solid var(--rule); cursor: pointer; color: var(--muted); transition: all 0.2s; }
   .detail-tab:last-child { border-right: none; }
   .detail-tab.active { background: var(--ink); color: var(--paper); }
   .detail-tab:hover:not(.active) { color: var(--ink); background: var(--cream); }
@@ -186,17 +91,10 @@
   .report-header { border-bottom: 2px solid var(--ink); padding-bottom: 1.25rem; margin-bottom: 1.5rem; }
   .report-header h2 { font-family: var(--serif); font-size: 1.8rem; font-weight: 500; line-height: 1.2; margin-bottom: 0.4rem; }
   .report-section { margin-bottom: 2rem; }
-  .report-section h4 {
-    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 3px; color: var(--accent);
-    margin-bottom: 0.6rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--rule);
-  }
+  .report-section h4 { font-family: var(--sans); font-size: 0.6rem; font-weight: 500; text-transform: uppercase; letter-spacing: 3px; color: var(--accent); margin-bottom: 0.6rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--rule); }
   .report-section p { font-size: 0.9rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0.6rem; line-height: 1.75; }
 
-  .key-metrics {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 2rem;
-  }
+  .key-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 2rem; }
   .metric-box { background: var(--paper); padding: 1rem 0.75rem; text-align: center; }
   .metric-label { font-family: var(--sans); font-size: 0.55rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--warm-gray); margin-bottom: 0.2rem; }
   .metric-value { font-family: var(--mono); font-size: 1.2rem; font-weight: 500; }
@@ -204,29 +102,14 @@
   .model-section { margin-bottom: 1.5rem; }
   .model-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
   .model-section-header h4 { font-family: var(--sans); font-size: 0.6rem; font-weight: 500; text-transform: uppercase; letter-spacing: 3px; color: var(--accent); }
-  .download-btn {
-    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 2px; padding: 0.4rem 1rem;
-    border: 1px solid var(--ink); background: transparent; cursor: pointer; transition: all 0.2s;
-  }
+  .download-btn { font-family: var(--sans); font-size: 0.6rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; padding: 0.4rem 1rem; border: 1px solid var(--ink); background: transparent; cursor: pointer; transition: all 0.2s; }
   .download-btn:hover { background: var(--ink); color: var(--paper); }
   .spreadsheet-preview { border: 1px solid var(--rule); overflow-x: auto; margin-bottom: 1rem; }
-  .spreadsheet-toolbar {
-    background: var(--cream); padding: 0.4rem 0.75rem;
-    display: flex; gap: 0.5rem; border-bottom: 1px solid var(--rule);
-  }
-  .sheet-tab {
-    font-family: var(--mono); font-size: 0.6rem; padding: 0.25rem 0.6rem;
-    background: var(--paper); border: 1px solid var(--rule); border-bottom: none;
-    cursor: pointer; color: var(--muted);
-  }
+  .spreadsheet-toolbar { background: var(--cream); padding: 0.4rem 0.75rem; display: flex; gap: 0.5rem; border-bottom: 1px solid var(--rule); }
+  .sheet-tab { font-family: var(--mono); font-size: 0.6rem; padding: 0.25rem 0.6rem; background: var(--paper); border: 1px solid var(--rule); border-bottom: none; cursor: pointer; color: var(--muted); }
   .sheet-tab.active { color: var(--ink); font-weight: 500; border-top: 2px solid var(--accent); }
   .spreadsheet-table { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 0.7rem; }
-  .spreadsheet-table th {
-    background: var(--cream); padding: 0.4rem 0.6rem; text-align: right;
-    font-weight: 500; border: 1px solid var(--rule); color: var(--warm-gray);
-    font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px;
-  }
+  .spreadsheet-table th { background: var(--cream); padding: 0.4rem 0.6rem; text-align: right; font-weight: 500; border: 1px solid var(--rule); color: var(--warm-gray); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px; }
   .spreadsheet-table th:first-child { text-align: left; }
   .spreadsheet-table td { padding: 0.4rem 0.6rem; text-align: right; border: 1px solid var(--rule); color: #3a3a3a; }
   .spreadsheet-table td:first-child { text-align: left; font-family: var(--sans); font-size: 0.7rem; color: #444; }
@@ -234,202 +117,68 @@
   .cell-highlight { color: var(--green) !important; font-weight: 500; }
   .cell-neg { color: var(--accent) !important; }
   .model-files { border: 1px solid var(--rule); }
-  .model-file-row {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0.75rem 1rem; border-bottom: 1px solid var(--rule); transition: background 0.2s;
-  }
+  .model-file-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; border-bottom: 1px solid var(--rule); transition: background 0.2s; }
   .model-file-row:last-child { border-bottom: none; }
   .model-file-row:hover { background: var(--cream); }
   .model-file-info { display: flex; align-items: center; gap: 0.6rem; }
-  .file-icon {
-    width: 32px; height: 32px; background: #217346; color: white;
-    font-family: var(--sans); font-size: 0.5rem; font-weight: 600;
-    display: flex; align-items: center; justify-content: center; border-radius: 2px;
-  }
+  .file-icon { width: 32px; height: 32px; background: #217346; color: white; font-family: var(--sans); font-size: 0.5rem; font-weight: 600; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
   .file-name { font-family: var(--sans); font-weight: 500; font-size: 0.8rem; }
   .file-meta { font-family: var(--mono); font-size: 0.65rem; color: var(--warm-gray); }
-  .file-download-sm {
-    font-family: var(--sans); font-size: 0.55rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 2px; color: var(--ink);
-    padding: 0.3rem 0.6rem; border: 1px solid var(--rule); background: none;
-    cursor: pointer; transition: all 0.2s;
-  }
+  .file-download-sm { font-family: var(--sans); font-size: 0.55rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--ink); padding: 0.3rem 0.6rem; border: 1px solid var(--rule); background: none; cursor: pointer; transition: all 0.2s; }
   .file-download-sm:hover { border-color: var(--ink); background: var(--ink); color: var(--paper); }
 
-  /* ── NEWS GRID ── */
-  .news-grid {
-    display: grid; grid-template-columns: 1fr 1fr 1fr;
-    gap: 0; border-left: 1px solid var(--rule); margin-bottom: 2rem;
-  }
-  .news-card {
-    padding: 1.5rem 1.5rem 2.5rem; border-right: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule); cursor: pointer; transition: background 0.3s;
-    position: relative;
-  }
+  .news-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-left: 1px solid var(--rule); margin-bottom: 2rem; }
+  .news-card { padding: 1.5rem 1.5rem 2.5rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); cursor: pointer; transition: background 0.3s; position: relative; }
   .news-card:hover { background: var(--cream); }
   .news-category { font-family: var(--sans); font-size: 0.55rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent); margin-bottom: 0.5rem; }
   .news-card h3 { font-family: var(--serif); font-size: 1rem; font-weight: 500; line-height: 1.3; margin-bottom: 0.5rem; }
   .news-excerpt { font-size: 0.8rem; font-weight: 300; color: #555; line-height: 1.5; margin-bottom: 0.6rem; }
   .news-date { font-family: var(--mono); font-size: 0.65rem; color: var(--warm-gray); }
-  .news-card .read-arrow {
-    position: absolute; bottom: 1.2rem; right: 1.5rem;
-    font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 2px; color: var(--accent);
-    opacity: 0; transform: translateX(-8px); transition: all 0.3s;
-  }
+  .news-card .read-arrow { position: absolute; bottom: 1.2rem; right: 1.5rem; font-family: var(--sans); font-size: 0.65rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); opacity: 0; transform: translateX(-8px); transition: all 0.3s; }
   .news-card:hover .read-arrow { opacity: 1; transform: translateX(0); }
 
-  /* ── ARTICLE OVERLAY ── */
-  .article-overlay {
-    position: fixed; inset: 0; z-index: 1000;
-    display: none; opacity: 0; transition: opacity 0.35s ease;
-  }
+  .article-overlay { position: fixed; inset: 0; z-index: 1000; display: none; opacity: 0; transition: opacity 0.35s ease; }
   .article-overlay.active { display: flex; }
   .article-overlay.visible { opacity: 1; }
-  .article-panel {
-    position: fixed; top: 0; bottom: 0; left: 50%;
-    width: min(820px, 95vw); height: 100vh;
-    background: var(--paper); overflow-y: auto;
-    transform: translateX(-50%) translateY(20px);
-    opacity: 0;
-    transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease;
-    box-shadow: 0 0 60px rgba(0,0,0,0.18);
-  }
-  .article-overlay.visible .article-panel {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-  }
-
-  .article-topbar {
-    position: sticky; top: 0; background: var(--paper);
-    border-bottom: 1px solid var(--rule); padding: 0.8rem 2rem;
-    display: flex; align-items: center; justify-content: space-between; z-index: 10;
-  }
-  .article-back {
-    font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 2px; background: none;
-    border: none; cursor: pointer; color: var(--ink); transition: color 0.2s;
-  }
+  .article-panel { position: fixed; top: 0; bottom: 0; left: 50%; width: min(820px, 95vw); height: 100vh; background: var(--paper); overflow-y: auto; transform: translateX(-50%) translateY(20px); opacity: 0; transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease; box-shadow: 0 0 60px rgba(0,0,0,0.18); }
+  .article-overlay.visible .article-panel { transform: translateX(-50%) translateY(0); opacity: 1; }
+  .article-topbar { position: sticky; top: 0; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 0.8rem 2rem; display: flex; align-items: center; justify-content: space-between; z-index: 10; }
+  .article-back { font-family: var(--sans); font-size: 0.65rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; background: none; border: none; cursor: pointer; color: var(--ink); transition: color 0.2s; }
   .article-back:hover { color: var(--accent); }
   .article-edition { font-family: var(--mono); font-size: 0.6rem; color: var(--warm-gray); }
-
   .article-body { padding: 2.5rem 3rem 4rem; max-width: 680px; margin: 0 auto; }
-
-  .article-kicker {
-    font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 3px; color: var(--accent);
-    margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;
-  }
+  .article-kicker { font-family: var(--sans); font-size: 0.6rem; font-weight: 500; text-transform: uppercase; letter-spacing: 3px; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
   .article-kicker::after { content: ''; flex: 0 0 32px; height: 1px; background: var(--accent); }
-
-  .article-headline {
-    font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.1rem);
-    font-weight: 700; line-height: 1.2; margin-bottom: 0.6rem; color: var(--ink);
-  }
-
-  .article-subheadline {
-    font-family: var(--body); font-size: 1rem; font-weight: 300; font-style: italic;
-    color: var(--warm-gray); line-height: 1.6; margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule);
-  }
-
-  .article-byline {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule);
-  }
-  .byline-author {
-    font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink);
-  }
+  .article-headline { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 700; line-height: 1.2; margin-bottom: 0.6rem; color: var(--ink); }
+  .article-subheadline { font-family: var(--body); font-size: 1rem; font-weight: 300; font-style: italic; color: var(--warm-gray); line-height: 1.6; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+  .article-byline { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+  .byline-author { font-family: var(--sans); font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink); }
   .byline-date { font-family: var(--mono); font-size: 0.65rem; color: var(--warm-gray); }
-
-  .article-stat-strip {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1px; background: var(--rule); border: 1px solid var(--rule);
-    margin: 2rem 0;
-  }
-  .stat-cell { background: var(--paper); padding: 1rem 0.75rem; text-align: center; }
-  .stat-label { font-family: var(--sans); font-size: 0.5rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--warm-gray); margin-bottom: 0.25rem; }
-  .stat-value { font-family: var(--mono); font-size: 1.3rem; font-weight: 500; color: var(--accent); }
-  .stat-desc { font-family: var(--sans); font-size: 0.6rem; font-weight: 300; color: var(--muted); margin-top: 0.15rem; }
-
-  .pull-quote {
-    border-left: 3px solid var(--accent); padding: 0.75rem 1.25rem;
-    margin: 2rem 0; background: var(--cream);
-  }
-  .pull-quote p {
-    font-family: var(--serif); font-size: 1rem; font-style: italic;
-    font-weight: 400; line-height: 1.65; color: var(--ink);
-  }
-
-  .article-body p.body-text {
-    font-family: var(--body); font-size: 0.95rem; font-weight: 300;
-    line-height: 1.85; color: #1a1a1a; margin-bottom: 1.25rem;
-  }
-
-  .article-section-label {
-    font-family: var(--sans); font-size: 0.55rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 3px; color: var(--accent);
-    margin: 2rem 0 0.75rem; padding-bottom: 0.35rem;
-    border-bottom: 1px solid var(--rule);
-  }
+  .article-body p.body-text { font-family: var(--body); font-size: 0.95rem; font-weight: 300; line-height: 1.85; color: #1a1a1a; margin-bottom: 1.25rem; }
 
   details.sources-accordion { border-top: 1px solid var(--rule); margin-top: 2.5rem; }
-  details.sources-accordion summary {
-    font-family: var(--sans); font-size: 0.75rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 3px; color: var(--warm-gray);
-    padding: 0.75rem 0; cursor: pointer; list-style: none;
-    display: flex; align-items: center; justify-content: space-between;
-    transition: color 0.2s; user-select: none;
-  }
+  details.sources-accordion summary { font-family: var(--sans); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--warm-gray); padding: 0.75rem 0; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; transition: color 0.2s; user-select: none; }
   details.sources-accordion summary::-webkit-details-marker { display: none; }
   details.sources-accordion summary:hover { color: var(--ink); }
-  details.sources-accordion summary .sources-chevron {
-    font-size: 1rem; font-weight: 700; transition: transform 0.25s ease; display: inline-block;
-  }
+  details.sources-accordion summary .sources-chevron { font-size: 1rem; font-weight: 700; transition: transform 0.25s ease; display: inline-block; }
   details.sources-accordion[open] summary .sources-chevron { transform: rotate(180deg); }
   details.sources-accordion[open] summary { color: var(--ink); }
   .sources-list { padding-bottom: 1.5rem; }
-  .source-item {
-    display: flex; gap: 0.75rem; padding: 0.6rem 0;
-    border-bottom: 1px solid var(--rule); align-items: flex-start;
-  }
+  .source-item { display: flex; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); align-items: flex-start; }
   .source-item:last-child { border-bottom: none; }
-  .source-outlet {
-    font-family: var(--sans); font-size: 0.62rem; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 1px; color: var(--ink);
-    min-width: 96px; padding-top: 0.1rem; flex-shrink: 0;
-  }
+  .source-outlet { font-family: var(--sans); font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--ink); min-width: 96px; padding-top: 0.1rem; flex-shrink: 0; }
   .source-detail { flex: 1; }
-  .source-title {
-    font-family: var(--body); font-size: 0.8rem; font-weight: 300;
-    color: #3a3a3a; line-height: 1.4; font-style: italic; margin-bottom: 0.2rem;
-  }
-  .source-link {
-    font-family: var(--mono); font-size: 0.58rem; color: var(--blue-ink);
-    text-decoration: none; word-break: break-all;
-  }
+  .source-title { font-family: var(--body); font-size: 0.8rem; font-weight: 300; color: #3a3a3a; line-height: 1.4; font-style: italic; margin-bottom: 0.2rem; }
+  .source-link { font-family: var(--mono); font-size: 0.58rem; color: var(--blue-ink); text-decoration: none; word-break: break-all; }
   .source-link:hover { text-decoration: underline; color: var(--accent); }
-  .source-date {
-    font-family: var(--mono); font-size: 0.58rem; color: var(--warm-gray);
-    margin-left: 0.5rem;
-  }
+  .source-date { font-family: var(--mono); font-size: 0.58rem; color: var(--warm-gray); margin-left: 0.5rem; }
 
-  /* ── ABOUT PAGE ── */
   .about-page { display: none; }
   .about-page.active { display: block; }
   .main-page { display: block; }
   .main-page.hidden { display: none; }
-
-  .about-section {
-    display: grid; grid-template-columns: 260px 1fr; gap: 3rem; padding: 2rem 0 3rem;
-  }
-  .about-photo {
-    width: 100%; aspect-ratio: 3/4; background: var(--cream); border: 1px solid var(--rule);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--sans); font-size: 0.65rem; font-weight: 400;
-    text-transform: uppercase; letter-spacing: 2px; color: var(--warm-gray);
-  }
+  .about-section { display: grid; grid-template-columns: 260px 1fr; gap: 3rem; padding: 2rem 0 3rem; }
+  .about-photo { width: 100%; aspect-ratio: 3/4; background: var(--cream); border: 1px solid var(--rule); display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 0.65rem; font-weight: 400; text-transform: uppercase; letter-spacing: 2px; color: var(--warm-gray); }
   .about-content h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 500; margin-bottom: 0.75rem; }
   .about-content p { font-size: 0.95rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0.75rem; max-width: 560px; }
   .about-details { margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
@@ -437,27 +186,15 @@
   .detail-block .detail-value { font-family: var(--serif); font-size: 0.95rem; font-weight: 500; }
   .detail-block a { color: var(--ink); text-decoration: none; }
   .detail-block a:hover { color: var(--accent); }
-
   .resume-section { padding: 0 0 3rem; }
-  .resume-section h3 {
-    font-family: var(--serif); font-size: 1.3rem; font-weight: 500;
-    border-bottom: 2px solid var(--ink); padding-bottom: 0.4rem; margin-bottom: 1.5rem;
-  }
+  .resume-section h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; border-bottom: 2px solid var(--ink); padding-bottom: 0.4rem; margin-bottom: 1.5rem; }
 
-  /* ── FOOTER ── */
   footer { border-top: 3px double var(--ink); padding: 1.5rem 0; text-align: center; }
   .footer-inner { font-family: var(--sans); font-size: 0.65rem; font-weight: 400; text-transform: uppercase; letter-spacing: 3px; color: var(--warm-gray); }
   .footer-links { margin-top: 0.6rem; display: flex; justify-content: center; gap: 2rem; }
-  .footer-links a {
-    font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 2px; text-decoration: none;
-    color: var(--ink); transition: color 0.2s;
-  }
+  .footer-links a { font-family: var(--sans); font-size: 0.65rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; color: var(--ink); transition: color 0.2s; }
   .footer-links a:hover { color: var(--accent); }
-  .footer-rule {
-    display: flex; align-items: center; gap: 1rem;
-    max-width: 1200px; margin: 1.5rem auto 0; padding: 0 2rem;
-  }
+  .footer-rule { display: flex; align-items: center; gap: 1rem; max-width: 1200px; margin: 1.5rem auto 0; padding: 0 2rem; }
   .footer-rule::before, .footer-rule::after { content: ''; flex: 1; height: 1px; background: var(--ink); }
   .footer-rule .diamond { font-size: 0.45rem; color: var(--ink); }
 
@@ -482,7 +219,6 @@
 </head>
 <body>
 
-<!-- MASTHEAD -->
 <header class="masthead">
   <div class="masthead-rule"><span class="diamond">◆</span></div>
   <div class="container" style="max-width:1200px;margin:0 auto;padding:0 2rem;">
@@ -492,17 +228,14 @@
   </div>
 </header>
 
-<!-- NAV -->
 <nav class="nav-bar">
   <div class="nav-inner">
-    <a href="#" onclick="showPage('main');return false;">Home</a>
-    <a href="#pitches" onclick="showPage('main');return false;">Stock Pitches</a>
-    <a href="#analysis" onclick="showPage('main');return false;">Analysis</a>
+    <a href="#" onclick="navigateToSection('pitches');return false;">Stock Pitches</a>
+    <a href="#" onclick="navigateToSection('analysis');return false;">Analysis</a>
     <a href="#" onclick="showPage('about');return false;">About</a>
   </div>
 </nav>
 
-<!-- MAIN PAGE -->
 <div class="main-page" id="mainPage">
   <div class="main-layout">
     <main class="content">
@@ -511,7 +244,6 @@
         <span>Independent Research</span>
       </div>
 
-      <!-- STOCK PITCHES -->
       <section id="pitches">
         <div class="section-header">
           <h2>Stock Pitches</h2>
@@ -552,15 +284,12 @@
         </div>
       </section>
 
-      <!-- NEWS & ANALYSIS -->
       <section id="analysis">
         <div class="section-header">
           <h2>News &amp; Analysis</h2>
           <span class="label">Market Commentary</span>
         </div>
         <div class="news-grid">
-
-          <!-- MACRO card — opens full article -->
           <div class="news-card fade-in" onclick="openArticle('macro1')">
             <p class="news-category">Macro</p>
             <h3>Uncertain Geopolitics Fuelling Stagflation Fears and Market Uncertainty</h3>
@@ -568,7 +297,6 @@
             <p class="news-date">Mar 15, 2026</p>
             <span class="read-arrow">Read →</span>
           </div>
-
           <div class="news-card fade-in">
             <p class="news-category">Sector Deep Dive</p>
             <h3>Semiconductors: From Cyclical to Structural Growth</h3>
@@ -605,7 +333,6 @@
   </div>
 </div>
 
-<!-- ABOUT PAGE -->
 <div class="about-page" id="aboutPage">
   <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
     <div class="section-header">
@@ -621,7 +348,7 @@
         <div class="about-details">
           <div class="detail-block"><p class="detail-label">Focus</p><p class="detail-value">Global Equities</p></div>
           <div class="detail-block"><p class="detail-label">Approach</p><p class="detail-value">Fundamental, Bottom-Up</p></div>
-          <div class="detail-block"><p class="detail-label">Contact</p><p class="detail-value"><a href="/cdn-cgi/l/email-protection#88edfae6fbfca6e3e7e7a6ebedc8efe5e9e1e4a6ebe7e5"><span class="__cf_email__" data-cfemail="b2d7c0dcc1c69cd9dddd9cd1d7f2d5dfd3dbde9cd1dddf">[email&#160;protected]</span></a></p></div>
+          <div class="detail-block"><p class="detail-label">Contact</p><p class="detail-value"><a href="mailto:ernst.koo.ce@gmail.com">ernst.koo.ce@gmail.com</a></p></div>
           <div class="detail-block"><p class="detail-label">LinkedIn</p><p class="detail-value"><a href="https://www.linkedin.com/in/ernstkoo" target="_blank">linkedin.com/in/ernstkoo</a></p></div>
         </div>
       </div>
@@ -644,7 +371,6 @@
   </div>
 </div>
 
-<!-- PITCH DETAIL OVERLAY -->
 <div class="pitch-detail-overlay" id="pitchOverlay">
   <div class="overlay-backdrop" onclick="closePitch()"></div>
   <div class="detail-panel">
@@ -659,7 +385,6 @@
   </div>
 </div>
 
-<!-- ARTICLE OVERLAY -->
 <div class="article-overlay" id="articleOverlay">
   <div class="overlay-backdrop" onclick="closeArticle()"></div>
   <div class="article-panel" id="articlePanel">
@@ -671,19 +396,35 @@
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
     <div class="footer-inner">The Daily Debrief &copy; 2026</div>
     <div class="footer-links">
-      <a href="/cdn-cgi/l/email-protection#e481968a9790ca8f8b8bca8781a48389858d88ca878b89">Email</a>
+      <a href="mailto:ernst.koo.ce@gmail.com">Email</a>
       <a href="https://www.linkedin.com/in/ernstkoo" target="_blank">LinkedIn</a>
     </div>
     <div class="footer-rule"><span class="diamond">◆</span></div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+// ═══ NAV: SCROLL TO SECTION ═══
+function navigateToSection(sectionId) {
+  // Ensure the main page is visible (handles case where user is on About page)
+  document.getElementById('mainPage').classList.remove('hidden');
+  document.getElementById('aboutPage').classList.remove('active');
+
+  // Use requestAnimationFrame so the DOM has time to show main page before scrolling
+  requestAnimationFrame(() => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const navHeight = document.querySelector('.nav-bar').offsetHeight;
+      const top = section.getBoundingClientRect().top + window.pageYOffset - navHeight - 8;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+  });
+}
+
 // ═══ PITCH DATA ═══
 const pitchData = {
   aapl: {
@@ -722,112 +463,35 @@ const articleData = {
     render() {
       return `
       <div class="article-kicker">Macro &middot; Weekly Market News in 10</div>
-
       <h1 class="article-headline">Uncertain Geopolitics Fuelling Stagflation Fears and Market Uncertainty</h1>
       <p class="article-subheadline">US-Israeli strikes on Iran have abruptly halted what appeared to be a constructive start to 2026 for equity markets &mdash; and the fallout extends well beyond crude prices.</p>
-
       <div class="article-byline">
         <span class="byline-author">Ernst Koo</span>
         <span class="byline-date">15 March 2026</span>
       </div>
-
       <p class="body-text">US-Israeli strikes on Iran have abruptly halted what appeared to be a constructive start to 2026 for equity markets. Brent crude and WTI have surged past $100 per barrel, driven by acute supply disruptions through the Strait of Hormuz &mdash; a vital chokepoint through which roughly 20% of the world's crude oil transits annually. With investors increasingly pricing in the prospect of a protracted conflict and a sustained blockage of this critical shipping lane, the S&amp;P 500 has shed almost 360 basis points, while the Dow Jones Industrial Average has fallen over 430 basis points from recent highs.</p>
-
       <p class="body-text">Yet the geopolitical shock does not stand alone. February's nonfarm payrolls fell 92,000 &mdash; well below the consensus expectation of a 55,000 gain &mdash; while the unemployment rate edged higher to 4.4%. The combination of rising unemployment, elevated energy prices, and an unstable geopolitical backdrop has prompted comparisons to the stagflation of the 1970s.</p>
-
       <p class="body-text">The Fed now finds itself in a deeply uncomfortable position: cut rates to defend employment at the risk of entrenching inflation, or hold policy steady to control prices at the cost of a sharper economic slowdown. Neither path is clean, and markets are beginning to price in that uncertainty &mdash; and the spread of potential outcomes is unusually wide.</p>
-
       <p class="body-text">On the equity side, the AI capex narrative which underpinned much of the bull case heading into 2026 is facing increased investor scrutiny. Concerns over the sustainability of data centre spending by hyperscalers and the Magnificent Seven have rippled across multiple sectors &mdash; from software and data providers to technology hardware manufacturers and financial institutions with sizeable exposure to technology lending.</p>
-
       <p class="body-text">These developments cast doubt on the premise that AI-driven earnings growth would broaden beyond mega-cap technology into the wider S&amp;P 500 in 2026. That said, the bear case is not without its counterweights. The fundamentals have not broken. Household balance sheets are healthy, real PCE is expanding, and S&amp;P 500 earnings are on track for 14% growth &mdash; modestly ahead of last year's 13%.</p>
-
       <p class="body-text">One might expect this environment to drive capital into traditional safe havens. Yet cross-asset correlations are offering little comfort. Both gold and US Treasuries closed lower last week even as volatility surged &mdash; a reminder that during periods of acute macro stress, conventional diversification relationships can break down precisely when they are needed most.</p>
-
       <p class="body-text">Looking ahead, the key variable to monitor is the persistence of the oil price shock. Should crude prices sustain levels above $100 per barrel, it would represent more than a transient geopolitical premium. It could signal the beginning of a structural shift in the global trade and energy landscape, with deep downstream consequences for inflation, monetary policy, and equity valuations across the board.</p>
-
       <details class="sources-accordion">
         <summary>Sources <span class="sources-chevron">▾</span></summary>
         <div class="sources-list">
-          <div class="source-item">
-            <span class="source-outlet">Al Jazeera</span>
-            <div class="source-detail">
-              <p class="source-title">How US-Israel attacks on Iran threaten the Strait of Hormuz, oil markets<span class="source-date">1 Mar 2026</span></p>
-              <a class="source-link" href="https://www.aljazeera.com/news/2026/3/1/how-us-israel-attacks-on-iran-threaten-the-strait-of-hormuz-oil-markets" target="_blank">aljazeera.com/news/2026/3/1/&hellip;</a>
-            </div>
-          </div>
-          <div class="source-item">
-            <span class="source-outlet">Al Jazeera</span>
-            <div class="source-detail">
-              <p class="source-title">Oil stays above $100 a barrel amid Iran's stranglehold on Strait of Hormuz<span class="source-date">13 Mar 2026</span></p>
-              <a class="source-link" href="https://www.aljazeera.com/economy/2026/3/13/oil-stays-above-100-a-barrel-amid-irans-stranglehold-on-strait-of-hormuz" target="_blank">aljazeera.com/economy/2026/3/13/&hellip;</a>
-            </div>
-          </div>
-          <div class="source-item">
-            <span class="source-outlet">BLS</span>
-            <div class="source-detail">
-              <p class="source-title">Employment Situation Summary &mdash; February 2026</p>
-              <a class="source-link" href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank">bls.gov/news.release/empsit.nr0.htm</a>
-            </div>
-          </div>
-          <div class="source-item">
-            <span class="source-outlet">CNBC</span>
-            <div class="source-detail">
-              <p class="source-title">Oil prices: Analysts raise the alarm as crude soars over Iran war<span class="source-date">9 Mar 2026</span></p>
-              <a class="source-link" href="https://www.cnbc.com/2026/03/09/oil-prices-iran-war-middle-east-us-israel-strait-of-hormuz.html" target="_blank">cnbc.com/2026/03/09/oil-prices-iran-war&hellip;</a>
-            </div>
-          </div>
-          <div class="source-item">
-            <span class="source-outlet">CNBC</span>
-            <div class="source-detail">
-              <p class="source-title">S&amp;P 500 falls to new low for year on Iran oil crisis, posts third-straight losing week<span class="source-date">14 Mar 2026</span></p>
-              <a class="source-link" href="https://www.cnbc.com/2026/03/12/stock-market-today-live-updates.html" target="_blank">cnbc.com/2026/03/12/stock-market-today&hellip;</a>
-            </div>
-          </div>
-          <div class="source-item">
-            <span class="source-outlet">CNBC</span>
-            <div class="source-detail">
-              <p class="source-title">Fears of 1970s-style stagflation arise with oil spike to $100. How big a threat is it?<span class="source-date">9 Mar 2026</span></p>
-              <a class="source-link" href="https://www.cnbc.com/2026/03/09/fears-of-1970s-style-stagflation-arise-with-oil-spike-to-100-how-big-a-threat-is-it.html" target="_blank">cnbc.com/2026/03/09/fears-of-1970s-style&hellip;</a>
-            </div>
-          </div>
-          <div class="source-item">
-            <span class="source-outlet">CNBC</span>
-            <div class="source-detail">
-              <p class="source-title">The Tech Download: Can hyperscalers justify their huge AI capex?<span class="source-date">13 Feb 2026</span></p>
-              <a class="source-link" href="https://www.cnbc.com/2026/02/13/tech-download-newsletter-ai-capex-hyperscalers.html" target="_blank">cnbc.com/2026/02/13/tech-download&hellip;</a>
-            </div>
-          </div>
-          <div class="source-item">
-            <span class="source-outlet">CNN Business</span>
-            <div class="source-detail">
-              <p class="source-title">Oil surges and stock futures sink as war in Iran threatens crude supply<span class="source-date">1 Mar 2026</span></p>
-              <a class="source-link" href="https://www.cnn.com/2026/03/01/business/oil-prices-us-attack-iran-vis" target="_blank">cnn.com/2026/03/01/business/oil-prices&hellip;</a>
-            </div>
-          </div>
-          <div class="source-item">
-            <span class="source-outlet">CNN Business</span>
-            <div class="source-detail">
-              <p class="source-title">With his war in Iran, Trump just made the next Fed chair's job even harder<span class="source-date">4 Mar 2026</span></p>
-              <a class="source-link" href="https://www.cnn.com/2026/03/04/economy/interest-rates-fed-iran-war" target="_blank">cnn.com/2026/03/04/economy/interest-rates&hellip;</a>
-            </div>
-          </div>
-          <div class="source-item">
-            <span class="source-outlet">Motley Fool</span>
-            <div class="source-detail">
-              <p class="source-title">The Trump-Led Iran War Can Lead to a Triple Whammy for the Federal Reserve<span class="source-date">14 Mar 2026</span></p>
-              <a class="source-link" href="https://www.fool.com/investing/2026/03/14/trump-led-iran-war-triple-whammy-federal-reserve/" target="_blank">fool.com/investing/2026/03/14/&hellip;</a>
-            </div>
-          </div>
-          <div class="source-item">
-            <span class="source-outlet">NPR</span>
-            <div class="source-detail">
-              <p class="source-title">Oil prices rise sharply in market trading after attacks in Middle East disrupt supply<span class="source-date">1 Mar 2026</span></p>
-              <a class="source-link" href="https://www.npr.org/2026/03/01/nx-s1-5731584/oil-prices-iran-us-israel-attacks-war" target="_blank">npr.org/2026/03/01/&hellip;</a>
-            </div>
-          </div>
+          <div class="source-item"><span class="source-outlet">Al Jazeera</span><div class="source-detail"><p class="source-title">How US-Israel attacks on Iran threaten the Strait of Hormuz, oil markets<span class="source-date">1 Mar 2026</span></p><a class="source-link" href="https://www.aljazeera.com/news/2026/3/1/how-us-israel-attacks-on-iran-threaten-the-strait-of-hormuz-oil-markets" target="_blank">aljazeera.com/news/2026/3/1/&hellip;</a></div></div>
+          <div class="source-item"><span class="source-outlet">Al Jazeera</span><div class="source-detail"><p class="source-title">Oil stays above $100 a barrel amid Iran's stranglehold on Strait of Hormuz<span class="source-date">13 Mar 2026</span></p><a class="source-link" href="https://www.aljazeera.com/economy/2026/3/13/oil-stays-above-100-a-barrel-amid-irans-stranglehold-on-strait-of-hormuz" target="_blank">aljazeera.com/economy/2026/3/13/&hellip;</a></div></div>
+          <div class="source-item"><span class="source-outlet">BLS</span><div class="source-detail"><p class="source-title">Employment Situation Summary &mdash; February 2026</p><a class="source-link" href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank">bls.gov/news.release/empsit.nr0.htm</a></div></div>
+          <div class="source-item"><span class="source-outlet">CNBC</span><div class="source-detail"><p class="source-title">Oil prices: Analysts raise the alarm as crude soars over Iran war<span class="source-date">9 Mar 2026</span></p><a class="source-link" href="https://www.cnbc.com/2026/03/09/oil-prices-iran-war-middle-east-us-israel-strait-of-hormuz.html" target="_blank">cnbc.com/2026/03/09/oil-prices-iran-war&hellip;</a></div></div>
+          <div class="source-item"><span class="source-outlet">CNBC</span><div class="source-detail"><p class="source-title">S&amp;P 500 falls to new low for year on Iran oil crisis, posts third-straight losing week<span class="source-date">14 Mar 2026</span></p><a class="source-link" href="https://www.cnbc.com/2026/03/12/stock-market-today-live-updates.html" target="_blank">cnbc.com/2026/03/12/stock-market-today&hellip;</a></div></div>
+          <div class="source-item"><span class="source-outlet">CNBC</span><div class="source-detail"><p class="source-title">Fears of 1970s-style stagflation arise with oil spike to $100. How big a threat is it?<span class="source-date">9 Mar 2026</span></p><a class="source-link" href="https://www.cnbc.com/2026/03/09/fears-of-1970s-style-stagflation-arise-with-oil-spike-to-100-how-big-a-threat-is-it.html" target="_blank">cnbc.com/2026/03/09/fears-of-1970s-style&hellip;</a></div></div>
+          <div class="source-item"><span class="source-outlet">CNBC</span><div class="source-detail"><p class="source-title">The Tech Download: Can hyperscalers justify their huge AI capex?<span class="source-date">13 Feb 2026</span></p><a class="source-link" href="https://www.cnbc.com/2026/02/13/tech-download-newsletter-ai-capex-hyperscalers.html" target="_blank">cnbc.com/2026/02/13/tech-download&hellip;</a></div></div>
+          <div class="source-item"><span class="source-outlet">CNN Business</span><div class="source-detail"><p class="source-title">Oil surges and stock futures sink as war in Iran threatens crude supply<span class="source-date">1 Mar 2026</span></p><a class="source-link" href="https://www.cnn.com/2026/03/01/business/oil-prices-us-attack-iran-vis" target="_blank">cnn.com/2026/03/01/business/oil-prices&hellip;</a></div></div>
+          <div class="source-item"><span class="source-outlet">CNN Business</span><div class="source-detail"><p class="source-title">With his war in Iran, Trump just made the next Fed chair's job even harder<span class="source-date">4 Mar 2026</span></p><a class="source-link" href="https://www.cnn.com/2026/03/04/economy/interest-rates-fed-iran-war" target="_blank">cnn.com/2026/03/04/economy/interest-rates&hellip;</a></div></div>
+          <div class="source-item"><span class="source-outlet">Motley Fool</span><div class="source-detail"><p class="source-title">The Trump-Led Iran War Can Lead to a Triple Whammy for the Federal Reserve<span class="source-date">14 Mar 2026</span></p><a class="source-link" href="https://www.fool.com/investing/2026/03/14/trump-led-iran-war-triple-whammy-federal-reserve/" target="_blank">fool.com/investing/2026/03/14/&hellip;</a></div></div>
+          <div class="source-item"><span class="source-outlet">NPR</span><div class="source-detail"><p class="source-title">Oil prices rise sharply in market trading after attacks in Middle East disrupt supply<span class="source-date">1 Mar 2026</span></p><a class="source-link" href="https://www.npr.org/2026/03/01/nx-s1-5731584/oil-prices-iran-us-israel-attacks-war" target="_blank">npr.org/2026/03/01/&hellip;</a></div></div>
         </div>
-      </details>
-      `;
+      </details>`;
     }
   }
 };
