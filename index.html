@@ -287,14 +287,18 @@
   .article-overlay.active { display: flex; }
   .article-overlay.visible { opacity: 1; }
   .article-panel {
-    position: fixed; top: 0; right: 0;
-    width: min(820px, 100vw); height: 100vh;
+    position: fixed; top: 0; bottom: 0; left: 50%;
+    width: min(820px, 95vw); height: 100vh;
     background: var(--paper); overflow-y: auto;
-    transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
-    box-shadow: -8px 0 40px rgba(0,0,0,0.12);
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease;
+    box-shadow: 0 0 60px rgba(0,0,0,0.18);
   }
-  .article-overlay.visible .article-panel { transform: translateX(0); }
+  .article-overlay.visible .article-panel {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
 
   .article-topbar {
     position: sticky; top: 0; background: var(--paper);
