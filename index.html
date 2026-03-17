@@ -72,12 +72,30 @@
   .pitch-has-model { position: absolute; bottom: 1.2rem; left: 1.5rem; font-family: var(--mono); font-size: 0.55rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--warm-gray); display: flex; align-items: center; gap: 0.3rem; }
   .pitch-has-model svg { width: 11px; height: 11px; fill: none; stroke: var(--warm-gray); stroke-width: 1.5; }
 
+  /* ═══ PITCH OVERLAY — centred (matches article overlay style) ═══ */
   .pitch-detail-overlay { position: fixed; inset: 0; z-index: 1000; display: none; opacity: 0; transition: opacity 0.35s ease; }
   .pitch-detail-overlay.active { display: flex; }
   .pitch-detail-overlay.visible { opacity: 1; }
   .overlay-backdrop { position: fixed; inset: 0; background: rgba(26,26,26,0.45); backdrop-filter: blur(4px); }
-  .detail-panel { position: fixed; top: 0; right: 0; width: min(900px, 100vw); height: 100vh; background: var(--paper); overflow-y: auto; transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); box-shadow: -8px 0 40px rgba(0,0,0,0.12); }
-  .pitch-detail-overlay.visible .detail-panel { transform: translateX(0); }
+  .detail-panel {
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: min(900px, 95vw);
+    height: 100vh;
+    background: var(--paper);
+    overflow-y: auto;
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease;
+    box-shadow: 0 0 60px rgba(0,0,0,0.18);
+  }
+  .pitch-detail-overlay.visible .detail-panel {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  /* ═══ END PITCH OVERLAY ═══ */
+
   .detail-topbar { position: sticky; top: 0; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 0.8rem 2rem; display: flex; align-items: center; justify-content: space-between; z-index: 10; }
   .detail-back { font-family: var(--sans); font-size: 0.65rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; background: none; border: none; cursor: pointer; color: var(--ink); transition: color 0.2s; }
   .detail-back:hover { color: var(--accent); }
@@ -410,11 +428,8 @@
 <script>
 // ═══ NAV: SCROLL TO SECTION ═══
 function navigateToSection(sectionId) {
-  // Ensure the main page is visible (handles case where user is on About page)
   document.getElementById('mainPage').classList.remove('hidden');
   document.getElementById('aboutPage').classList.remove('active');
-
-  // Use requestAnimationFrame so the DOM has time to show main page before scrolling
   requestAnimationFrame(() => {
     const section = document.getElementById(sectionId);
     if (section) {
