@@ -40,7 +40,7 @@
   .masthead-rule::before, .masthead-rule::after { content: ''; flex: 1; height: 1px; background: var(--ink); }
   .masthead-rule .diamond { font-size: 0.45rem; color: var(--ink); }
   .masthead-date { font-family: var(--sans); font-size: 0.65rem; font-weight: 400; text-transform: uppercase; letter-spacing: 3px; color: var(--warm-gray); margin: 0.8rem 0 0.4rem; }
-  .masthead h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; letter-spacing: -0.5px; line-height: 1.05; }
+  .masthead h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; font-style: italic; letter-spacing: -0.5px; line-height: 1.05; }
   .masthead-tagline { font-family: var(--sans); font-weight: 300; font-style: italic; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
 
   .nav-bar { border-bottom: 1px solid var(--rule); padding: 0.6rem 0; position: sticky; top: 0; background: var(--paper); z-index: 100; }
@@ -366,7 +366,7 @@
         <div class="about-details">
           <div class="detail-block"><p class="detail-label">Focus</p><p class="detail-value">Global Equities</p></div>
           <div class="detail-block"><p class="detail-label">Approach</p><p class="detail-value">Fundamental, Bottom-Up</p></div>
-          <div class="detail-block"><p class="detail-label">Contact</p><p class="detail-value"><a href="mailto:ernst.koo.ce@gmail.com">ernst.koo.ce@gmail.com</a></p></div>
+          <div class="detail-block"><p class="detail-label">Contact</p><p class="detail-value"><a href="/cdn-cgi/l/email-protection#3356415d40471d585c5c1d505673545e525a5f1d505c5e"><span class="__cf_email__" data-cfemail="82e7f0ecf1f6ace9ededace1e7c2e5efe3ebeeace1edef">[email&#160;protected]</span></a></p></div>
           <div class="detail-block"><p class="detail-label">LinkedIn</p><p class="detail-value"><a href="https://www.linkedin.com/in/ernstkoo" target="_blank">linkedin.com/in/ernstkoo</a></p></div>
         </div>
       </div>
@@ -418,14 +418,14 @@
   <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
     <div class="footer-inner">The Daily Debrief &copy; 2026</div>
     <div class="footer-links">
-      <a href="mailto:ernst.koo.ce@gmail.com">Email</a>
+      <a href="/cdn-cgi/l/email-protection#88edfae6fbfca6e3e7e7a6ebedc8efe5e9e1e4a6ebe7e5">Email</a>
       <a href="https://www.linkedin.com/in/ernstkoo" target="_blank">LinkedIn</a>
     </div>
     <div class="footer-rule"><span class="diamond">◆</span></div>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ═══ NAV: SCROLL TO SECTION ═══
 function navigateToSection(sectionId) {
   document.getElementById('mainPage').classList.remove('hidden');
@@ -567,12 +567,4 @@ function showPage(page) {
 document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', {
   weekday:'long', year:'numeric', month:'long', day:'numeric'
 });
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.style.animationPlayState = 'running'; });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => {
-  el.style.animationPlayState = 'paused'; obs.observe(el);
-});
-</script>
-</body>
-</html>
+const obs = new Inter
